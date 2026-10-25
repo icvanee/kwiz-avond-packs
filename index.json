@@ -13,10 +13,10 @@
   },
   {
    "id": "meezingers-2",
-   "version": 1,
+   "version": 2,
    "title": "Meezingers 2: van Hazes tot Bon Jovi",
    "file": "meezingers-2.json",
-   "sha256": "b441c95b016fbd9f61496883bf42771af77d83abc1bc3f6fa3af36bf125d859a",
+   "sha256": "3c6428f4fb793846caf080f8d6321dce1a4eb8c3b92f32f0973fa3172b45a5e7",
    "minApp": 1,
    "questions": 0,
    "songs": 22
