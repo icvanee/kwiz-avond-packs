@@ -1,0 +1,25 @@
+{
+ "format": 1,
+ "packs": [
+  {
+   "id": "extra-vragen-1",
+   "version": 1,
+   "title": "Extra vragen 1: makkelijke kroegvragen",
+   "file": "extra-vragen-1.json",
+   "sha256": "8ddbc00af9a93485908444882c3aa86620e61cd80ac9c9651a2b46c41934cf5b",
+   "minApp": 1,
+   "questions": 32,
+   "songs": 0
+  },
+  {
+   "id": "meezingers-2",
+   "version": 1,
+   "title": "Meezingers 2: van Hazes tot Bon Jovi",
+   "file": "meezingers-2.json",
+   "sha256": "b441c95b016fbd9f61496883bf42771af77d83abc1bc3f6fa3af36bf125d859a",
+   "minApp": 1,
+   "questions": 0,
+   "songs": 22
+  }
+ ]
+}
