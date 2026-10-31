@@ -70,6 +70,16 @@
    "questions": 0,
    "songs": 100,
    "sha256": "7d64745ef21fe31a56f9d81d873c783c92bad8149e4fd79ea6b4e93bbf9ab7ac"
+  },
+  {
+   "id": "sinterklaas-1",
+   "version": 1,
+   "title": "Sinterklaas: 80 vragen en sinterklaashits",
+   "file": "sinterklaas-1.kwz",
+   "minApp": 1,
+   "questions": 80,
+   "songs": 11,
+   "sha256": "a3816ee15db70c8e8c584e276089bc99ee211dfcc6e84938c167021745ab7e06"
   }
  ]
 }
