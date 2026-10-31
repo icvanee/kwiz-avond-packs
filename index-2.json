@@ -9,7 +9,7 @@
    "minApp": 1,
    "questions": 32,
    "songs": 0,
-   "sha256": "5357d4ec697c043905cfc1f3d22a0ff7cceac6639730d646832e1066a3e1f72f"
+   "sha256": "66077eb6015efd12e5cf6d739f35e8562807827241b0613a9ec2ffaa906fd701"
   },
   {
    "id": "extra-vragen-2",
@@ -19,7 +19,7 @@
    "minApp": 1,
    "questions": 150,
    "songs": 0,
-   "sha256": "d1d468cb3388a9e350e93875e40cb777167cd48319fd2df86e17ccff1f0871e5"
+   "sha256": "370cdd4cd793efcc2583ad2dad3a966464e616937f348370e6d4fd4e976f8ba9"
   },
   {
    "id": "extra-vragen-3",
@@ -29,7 +29,7 @@
    "minApp": 1,
    "questions": 500,
    "songs": 0,
-   "sha256": "b44488f6966fe541c73019fe79a780a08ed6e79668252412b195821c81aa70da"
+   "sha256": "d998a21a8b0f9c1d55ab98d699900be85f47ec2fdb0ce9803abc369348ebbba3"
   },
   {
    "id": "meezingers-2",
@@ -39,7 +39,7 @@
    "minApp": 1,
    "questions": 0,
    "songs": 22,
-   "sha256": "75119ccb0d2d64b86840239470e986e2a7791f453396d782464b92dd67b36d9c"
+   "sha256": "1e44f4bc18c90c3e25ef5be5c81c58b7cd7e19d19cb1b0779e522be31ddddf70"
   },
   {
    "id": "meezingers-3",
@@ -49,7 +49,7 @@
    "minApp": 1,
    "questions": 0,
    "songs": 7,
-   "sha256": "79efcc2475f259b8d50985f5c508dd047054aed1d45b78db623f5336dbcbbcae"
+   "sha256": "d848f676f7b8c3be3d0780e53ba0d2a98840dba39bd1e45a271dff01bde5e7dd"
   },
   {
    "id": "meezingers-4",
@@ -59,7 +59,7 @@
    "minApp": 1,
    "questions": 0,
    "songs": 100,
-   "sha256": "a086b277601439eb89258c43e8275e87177959b98f3c744160f807b01a561505"
+   "sha256": "7d64745ef21fe31a56f9d81d873c783c92bad8149e4fd79ea6b4e93bbf9ab7ac"
   }
  ]
 }
