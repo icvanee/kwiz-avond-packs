@@ -32,6 +32,16 @@
    "sha256": "d998a21a8b0f9c1d55ab98d699900be85f47ec2fdb0ce9803abc369348ebbba3"
   },
   {
+   "id": "kerst-1",
+   "version": 1,
+   "title": "Kerst: 88 kerstvragen en kerstmeezingers",
+   "file": "kerst-1.kwz",
+   "minApp": 1,
+   "questions": 88,
+   "songs": 39,
+   "sha256": "8d20092f97be54304801e14ec039784d8e444199ac2365b957424405da81899b"
+  },
+  {
    "id": "meezingers-2",
    "version": 3,
    "title": "Meezingers 2: van Hazes tot Bon Jovi",
