@@ -1,5 +1,6 @@
 /* Kwiz Avond – kwizavond.nl
-   Geen externe fonts, geen trackers: alleen systeemlettertypen. */
+   Geen externe fonts en geen trackers: Bebas Neue staat zelf op de site (fonts/, OFL-licentie). */
+@font-face{font-family:"Bebas Neue";src:url(fonts/font-bebas.woff2) format("woff2");font-display:swap}
 :root{
   --bg:#08060f; --bg2:#110d1f; --card:rgba(255,255,255,.045); --line:rgba(255,255,255,.1);
   --fg:#f4f1e8; --dim:#bdb8c9;
@@ -22,7 +23,7 @@ a:hover{color:#7ffaff}
 .skip:focus{left:8px}
 
 /* ---------- koppen ---------- */
-h1,h2,h3,.logo{font-family:var(--display);font-weight:700;letter-spacing:.02em;line-height:1.02;margin:0}
+h1,h2,h3,.logo{font-family:var(--display);font-weight:400;font-synthesis:none;letter-spacing:.02em;line-height:1.02;margin:0}
 h1{font-size:clamp(52px,13vw,96px);text-transform:uppercase}
 h2{font-size:clamp(38px,8vw,60px);text-transform:uppercase;margin-bottom:12px}
 h3{font-size:28px;text-transform:uppercase;margin-bottom:6px}
@@ -153,7 +154,7 @@ section.alt{background:linear-gradient(180deg,var(--bg2),var(--bg))}
 @media (min-width:860px){.prices{grid-template-columns:repeat(3,1fr);align-items:stretch}}
 .price{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column}
 .price h3{font-size:34px}
-.price .amount{font-family:var(--display);font-size:52px;line-height:1;margin:10px 0 2px}
+.price .amount{font-family:var(--display);font-weight:400;font-size:52px;line-height:1;margin:10px 0 2px}
 .price .amount small{font-family:var(--body);font-size:16px;color:var(--dim);font-weight:400;margin-left:6px}
 .price .alt{color:var(--dim);font-size:15px;margin-bottom:16px}
 .price ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
