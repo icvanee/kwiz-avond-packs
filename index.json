@@ -1,45 +1,4 @@
 {
  "format": 1,
- "packs": [
-  {
-   "id": "extra-vragen-1",
-   "version": 1,
-   "title": "Extra vragen 1: makkelijke kroegvragen",
-   "file": "extra-vragen-1.json",
-   "sha256": "8ddbc00af9a93485908444882c3aa86620e61cd80ac9c9651a2b46c41934cf5b",
-   "minApp": 1,
-   "questions": 32,
-   "songs": 0
-  },
-  {
-   "id": "extra-vragen-2",
-   "version": 1,
-   "title": "Extra vragen 2: 150 nieuwe kroegvragen",
-   "file": "extra-vragen-2.json",
-   "sha256": "ea759342d6406f3192fd8e8bd037974e26d4a7045e0126fb1312da82cb759598",
-   "minApp": 1,
-   "questions": 150,
-   "songs": 0
-  },
-  {
-   "id": "meezingers-2",
-   "version": 2,
-   "title": "Meezingers 2: van Hazes tot Bon Jovi",
-   "file": "meezingers-2.json",
-   "sha256": "3c6428f4fb793846caf080f8d6321dce1a4eb8c3b92f32f0973fa3172b45a5e7",
-   "minApp": 1,
-   "questions": 0,
-   "songs": 22
-  },
-  {
-   "id": "meezingers-3",
-   "version": 1,
-   "title": "Meezingers 3: van Jan Smit tot Wham!",
-   "file": "meezingers-3.json",
-   "sha256": "74a1589bfbcd08f65eb793a88d682b02b210c9bc3c3d137eb780812e633142a5",
-   "minApp": 1,
-   "questions": 0,
-   "songs": 7
-  }
- ]
+ "packs": []
 }

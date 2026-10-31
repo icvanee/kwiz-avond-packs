@@ -1,0 +1,65 @@
+{
+ "format": 2,
+ "packs": [
+  {
+   "id": "extra-vragen-1",
+   "version": 1,
+   "title": "Extra vragen 1: makkelijke kroegvragen",
+   "file": "extra-vragen-1.kwz",
+   "minApp": 1,
+   "questions": 32,
+   "songs": 0,
+   "sha256": "5357d4ec697c043905cfc1f3d22a0ff7cceac6639730d646832e1066a3e1f72f"
+  },
+  {
+   "id": "extra-vragen-2",
+   "version": 1,
+   "title": "Extra vragen 2: 150 nieuwe kroegvragen",
+   "file": "extra-vragen-2.kwz",
+   "minApp": 1,
+   "questions": 150,
+   "songs": 0,
+   "sha256": "d1d468cb3388a9e350e93875e40cb777167cd48319fd2df86e17ccff1f0871e5"
+  },
+  {
+   "id": "extra-vragen-3",
+   "version": 1,
+   "title": "Extra vragen 3: 500 nieuwe kroegvragen",
+   "file": "extra-vragen-3.kwz",
+   "minApp": 1,
+   "questions": 500,
+   "songs": 0,
+   "sha256": "b44488f6966fe541c73019fe79a780a08ed6e79668252412b195821c81aa70da"
+  },
+  {
+   "id": "meezingers-2",
+   "version": 3,
+   "title": "Meezingers 2: van Hazes tot Bon Jovi",
+   "file": "meezingers-2.kwz",
+   "minApp": 1,
+   "questions": 0,
+   "songs": 22,
+   "sha256": "75119ccb0d2d64b86840239470e986e2a7791f453396d782464b92dd67b36d9c"
+  },
+  {
+   "id": "meezingers-3",
+   "version": 2,
+   "title": "Meezingers 3: van Jan Smit tot Wham!",
+   "file": "meezingers-3.kwz",
+   "minApp": 1,
+   "questions": 0,
+   "songs": 7,
+   "sha256": "79efcc2475f259b8d50985f5c508dd047054aed1d45b78db623f5336dbcbbcae"
+  },
+  {
+   "id": "meezingers-4",
+   "version": 1,
+   "title": "Meezingers 4: 100 nieuwe meezingers",
+   "file": "meezingers-4.kwz",
+   "minApp": 1,
+   "questions": 0,
+   "songs": 100,
+   "sha256": "a086b277601439eb89258c43e8275e87177959b98f3c744160f807b01a561505"
+  }
+ ]
+}
