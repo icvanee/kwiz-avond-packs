@@ -32,6 +32,36 @@
    "sha256": "d998a21a8b0f9c1d55ab98d699900be85f47ec2fdb0ce9803abc369348ebbba3"
   },
   {
+   "id": "halloween-1",
+   "version": 1,
+   "title": "Halloween: griezelvragen en spookhits",
+   "file": "halloween-1.kwz",
+   "minApp": 1,
+   "questions": 53,
+   "songs": 20,
+   "sha256": "a36908519ee3584013feb729673f194f845e30c1953ce04cbcaeea64390eef62"
+  },
+  {
+   "id": "jaren80-1",
+   "version": 1,
+   "title": "Jaren 80: meezingers uit de jaren tachtig",
+   "file": "jaren80-1.kwz",
+   "minApp": 2,
+   "questions": 0,
+   "songs": 31,
+   "sha256": "c480bceb766f5f9e437c1db853fe6cec1a637ab972c533cef9cd989a04d8412d"
+  },
+  {
+   "id": "jaren90-1",
+   "version": 1,
+   "title": "Jaren 90: meezingers uit de jaren negentig",
+   "file": "jaren90-1.kwz",
+   "minApp": 2,
+   "questions": 0,
+   "songs": 30,
+   "sha256": "075d13c8422c5dbf8c29f6c629beca3e5b6b9625c392b36d1140f9661d0c5dfd"
+  },
+  {
    "id": "kerst-1",
    "version": 1,
    "title": "Kerst: 88 kerstvragen en kerstmeezingers",
@@ -40,6 +70,16 @@
    "questions": 88,
    "songs": 39,
    "sha256": "8d20092f97be54304801e14ec039784d8e444199ac2365b957424405da81899b"
+  },
+  {
+   "id": "koningsdag-1",
+   "version": 1,
+   "title": "Koningsdag: oranjevragen en meezingers",
+   "file": "koningsdag-1.kwz",
+   "minApp": 1,
+   "questions": 51,
+   "songs": 18,
+   "sha256": "250b531c701d52f94d0b07ec8cbb06d3db0ddf9171e9db6d8d477f73d09dc864"
   },
   {
    "id": "meezingers-2",
@@ -70,6 +110,26 @@
    "questions": 0,
    "songs": 100,
    "sha256": "7d64745ef21fe31a56f9d81d873c783c92bad8149e4fd79ea6b4e93bbf9ab7ac"
+  },
+  {
+   "id": "nederpop-1",
+   "version": 1,
+   "title": "Nederpop: Nederlandse popklassiekers",
+   "file": "nederpop-1.kwz",
+   "minApp": 2,
+   "questions": 0,
+   "songs": 29,
+   "sha256": "b3cb525de4d6a67e111a1b1150d232595b933bf981166db5043f328a56d0fa66"
+  },
+  {
+   "id": "oudennieuw-1",
+   "version": 1,
+   "title": "Oud en nieuw: vragen en feesthits",
+   "file": "oudennieuw-1.kwz",
+   "minApp": 1,
+   "questions": 54,
+   "songs": 20,
+   "sha256": "35282bf79f5245bd666e3a60c2d317f116bc57f5014d4b642707682a3cf713dd"
   },
   {
    "id": "sinterklaas-1",
