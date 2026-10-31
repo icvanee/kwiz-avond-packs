@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kwiz Avond · Vragen insturen</title>
+<meta name="description" content="Bedenk vragen voor de Kwiz Avond van je familie of vrienden en stuur ze naar de quizmaster.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#08060f">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Vragen insturen (idee 5). Geen server: de vragen gaan in het deel van de link na de #,
+   en dat stuurt een browser nooit naar een website. */
+main{padding:28px 0 64px}
+main .wrap{max-width:680px}
+h1{font-size:clamp(44px,11vw,72px)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin:18px 0}
+label{display:block;font-weight:700;font-size:15px;margin:12px 0 4px}
+label small{font-weight:400;color:var(--dim)}
+input,textarea{width:100%;font:16px/1.4 var(--body);color:var(--fg);background:#0f0b1c;border:1px solid rgba(255,255,255,.18);
+  border-radius:12px;padding:11px 12px}
+input:focus,textarea:focus{outline:2px solid var(--cyan);outline-offset:1px;border-color:transparent}
+textarea{min-height:76px;resize:vertical}
+.good input{border-color:rgba(57,255,20,.5)}
+.wrongs{display:grid;gap:8px}
+.err{color:var(--pink);font-size:15px;margin:10px 0 0;min-height:1em}
+.btn{border:0;cursor:pointer;font:700 17px/1 var(--body)}
+.btn-store,.btn-ghost{margin-top:14px}
+.list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.list li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.list .q{font-weight:700}
+.list .a{color:var(--green);font-size:15px}
+.list .w{color:var(--dim);font-size:15px}
+.list .f{color:var(--dim);font-size:14px;font-style:italic}
+.list button{float:right;background:none;border:0;color:var(--dim);font-size:14px;cursor:pointer;padding:2px 0 8px 10px}
+.count{color:var(--dim);font-size:15px}
+.ok{color:var(--green)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="./" aria-label="Kwiz Avond, naar de voorpagina"><img src="favicon.png" alt="" width="32" height="32"><span><b>KWIZ</b> AVOND</span></a>
+  </div>
+</header>
+
+<main id="inhoud">
+  <div class="wrap">
+
+    <!-- Zonder uitnodiging -->
+    <section id="geen" hidden style="padding:0;border:0">
+      <p class="eyebrow">Vragen insturen</p>
+      <h1>Bedenk zelf <span class="g">vragen</span></h1>
+      <p class="lead">Hier kun je vragen bedenken voor de Kwiz Avond van je familie of vrienden. Daarvoor heb je een uitnodiging nodig van de quizmaster.</p>
+      <div class="box">
+        <p><b>Ben je de quizmaster?</b> Open in de app Kwiz Avond <i>Eigen vragen</i> en tik op <i>Familie laten meedoen</i>. Je krijgt een link die je in de familie-app zet.</p>
+        <p style="margin:0"><b>Kreeg je een link?</b> Open dan precies die link, dan kun je meteen beginnen.</p>
+      </div>
+    </section>
+
+    <!-- Vragen bedenken -->
+    <section id="maak" hidden style="padding:0;border:0">
+      <p class="eyebrow">Vragen insturen</p>
+      <h1>Vragen voor <span class="g" id="setnaam"></span></h1>
+      <p class="lead">Bedenk vragen over de familie, over vroeger of over wat jullie samen meemaakten. De quizmaster stelt ze tijdens de Kwiz Avond.</p>
+
+      <div class="box">
+        <label for="naam">Je naam <small>(zien de spelers bij jouw vragen)</small></label>
+        <input id="naam" maxlength="24" autocomplete="given-name" placeholder="Bijvoorbeeld Ans">
+      </div>
+
+      <form class="box" id="form" novalidate>
+        <h3>Nieuwe vraag</h3>
+        <label for="vraag">Vraag</label>
+        <textarea id="vraag" maxlength="300" placeholder="Hoe heette onze eerste hond?"></textarea>
+        <div class="good"><label for="goed">Goed antwoord</label>
+          <input id="goed" maxlength="80" placeholder="Bobbie"></div>
+        <label>Drie foute antwoorden <small>(die moeten wel geloofwaardig zijn)</small></label>
+        <div class="wrongs">
+          <input id="fout1" maxlength="80" placeholder="Max" aria-label="Fout antwoord 1">
+          <input id="fout2" maxlength="80" placeholder="Luna" aria-label="Fout antwoord 2">
+          <input id="fout3" maxlength="80" placeholder="Snuf" aria-label="Fout antwoord 3">
+        </div>
+        <label for="weetje">Weetje <small>(mag leeg, verschijnt bij het antwoord)</small></label>
+        <input id="weetje" maxlength="300" placeholder="Bobbie werd 14 jaar.">
+        <p class="err" id="fout" role="alert"></p>
+        <button class="btn btn-ghost" type="submit">＋ Vraag toevoegen</button>
+      </form>
+
+      <h3 style="margin-top:28px">Jouw vragen</h3>
+      <p class="count" id="telling"></p>
+      <ul class="list" id="lijst"></ul>
+
+      <div id="stuurbox" hidden>
+        <button class="btn btn-store" id="stuur" type="button">📨 Stuur naar de quizmaster</button>
+        <p class="small" style="margin-top:10px">Je stuurt een link, bijvoorbeeld via WhatsApp. De vragen zitten in die link zelf en komen nergens anders terecht. Ze blijven ook op deze telefoon staan, dus je kunt later meer toevoegen en opnieuw sturen.</p>
+        <p class="ok" id="gekopieerd" hidden>De link is gekopieerd. Plak hem in een bericht aan de quizmaster.</p>
+      </div>
+    </section>
+
+    <!-- Ontvangen (bij de quizmaster) -->
+    <section id="ontvang" hidden style="padding:0;border:0">
+      <p class="eyebrow">Vragen ontvangen</p>
+      <h1><span class="g" id="van"></span> stuurt <span id="aantal"></span></h1>
+      <p class="lead">Voor <b id="ontvangset"></b>. Tik op de knop om ze in Kwiz Avond te zetten. De app laat ze eerst nog zien.</p>
+      <a class="btn btn-store" id="open">📲 Zet in Kwiz Avond</a>
+      <p class="small" style="margin-top:10px">Opent er niets? Open deze link dan op de iPhone of iPad waarop je Kwiz Avond speelt.</p>
+      <ul class="list" id="ontvanglijst" style="margin-top:22px"></ul>
+      <button class="btn btn-ghost" id="csv" type="button">Download als spreadsheet (CSV)</button>
+    </section>
+
+    <p class="err" id="kapot" hidden>Deze link is niet compleet of klopt niet. Vraag of je hem nog een keer gestuurd krijgt.</p>
+  </div>
+</main>
+
+<script>
+'use strict';
+const MAX = 25, $ = id => document.getElementById(id);
+
+// ── Link: "z" + base64url(deflate(JSON)), of "j" + base64url(JSON) als de browser niet kan inpakken ──
+const b64u = bytes => btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+const unb64u = s => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+async function pack(obj){
+  const raw = new TextEncoder().encode(JSON.stringify(obj));
+  if (!window.CompressionStream) return 'j' + b64u(raw);
+  const buf = await new Response(new Blob([raw]).stream().pipeThrough(new CompressionStream('deflate-raw'))).arrayBuffer();
+  return 'z' + b64u(new Uint8Array(buf));
+}
+async function unpack(s){
+  const bytes = unb64u(s.slice(1));
+  if (s[0] === 'j') return JSON.parse(new TextDecoder().decode(bytes));
+  const buf = await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer();
+  return JSON.parse(new TextDecoder().decode(buf));
+}
+
+// ── Controle, hetzelfde als in de app ──
+const clean = s => String(s || '').replace(/\s+/g, ' ').trim();
+function check(q){
+  if (q[0].length < 5) return 'De vraag ontbreekt of is te kort.';
+  if (!q[1]) return 'Het goede antwoord ontbreekt.';
+  if (!q[2] || !q[3] || !q[4]) return 'Er zijn drie foute antwoorden nodig.';
+  if (new Set(q.slice(1, 5).map(a => a.toLowerCase())).size < 4) return 'Twee antwoorden zijn hetzelfde.';
+  return '';
+}
+
+const params = new URLSearchParams(location.hash.slice(1));
+const store = (() => { try { return window.localStorage; } catch (e) { return null; } })();
+const get = k => { try { return store && store.getItem(k); } catch (e) { return null; } };
+const put = (k, v) => { try { store && store.setItem(k, v); } catch (e) {} };
+
+function item(q, onDelete){
+  const li = document.createElement('li');
+  if (onDelete){ const b = document.createElement('button'); b.type = 'button'; b.textContent = 'Weghalen'; b.onclick = onDelete; li.append(b); }
+  const add = (cls, text) => { const d = document.createElement('div'); d.className = cls; d.textContent = text; li.append(d); };
+  add('q', q[0]); add('a', '✓ ' + q[1]); add('w', '✗ ' + q.slice(2, 5).join(' · '));
+  if (q[5]) add('f', '💡 ' + q[5]);
+  return li;
+}
+
+// ── Vragen bedenken ──
+function maak(set, code){
+  $('maak').hidden = false;
+  $('setnaam').textContent = set;
+  document.title = 'Vragen voor ' + set + ' · Kwiz Avond';
+  const key = 'kwiz-vragen-' + code;
+  let qs = []; try { qs = JSON.parse(get(key) || '[]').filter(q => Array.isArray(q) && !check(q)); } catch (e) {}
+  $('naam').value = get('kwiz-naam') || '';
+  $('naam').oninput = () => put('kwiz-naam', clean($('naam').value));
+  const save = () => { put(key, JSON.stringify(qs)); toon(); };
+  function toon(){
+    const l = $('lijst'); l.textContent = '';
+    qs.forEach((q, i) => l.append(item(q, () => { qs.splice(i, 1); save(); })));
+    $('telling').textContent = qs.length ? `${qs.length} ${qs.length === 1 ? 'vraag' : 'vragen'}${qs.length >= MAX ? `, het maximum per keer. Stuur deze eerst en begin dan opnieuw.` : ''}` : 'Nog geen vragen. Vul hierboven je eerste vraag in.';
+    $('stuurbox').hidden = !qs.length;
+  }
+  $('form').onsubmit = e => {
+    e.preventDefault();
+    const q = ['vraag', 'goed', 'fout1', 'fout2', 'fout3', 'weetje'].map(id => clean($(id).value));
+    let err = check(q);
+    if (!err && qs.length >= MAX) err = `Er kunnen ${MAX} vragen per keer. Stuur deze eerst naar de quizmaster.`;
+    if (!err && qs.some(o => o[0].toLowerCase() === q[0].toLowerCase())) err = 'Deze vraag staat er al bij.';
+    $('fout').textContent = err;
+    if (err) return;
+    if (!q[5]) q.pop();
+    qs.push(q); save();
+    ['vraag', 'goed', 'fout1', 'fout2', 'fout3', 'weetje'].forEach(id => $(id).value = '');
+    $('vraag').focus();
+  };
+  $('stuur').onclick = async () => {
+    const naam = clean($('naam').value);
+    if (!naam){ $('naam').focus(); $('naam').setAttribute('aria-invalid', 'true'); return; }
+    const url = location.origin + location.pathname + '#v=' + await pack({ v: 1, s: set, c: code, n: naam, q: qs });
+    const text = `${naam} heeft ${qs.length} ${qs.length === 1 ? 'vraag' : 'vragen'} voor ${set}. Open de link op de telefoon met Kwiz Avond:`;
+    if (navigator.share) { try { await navigator.share({ title: 'Vragen voor ' + set, text, url }); return; } catch (e) { if (e.name === 'AbortError') return; } }
+    try { await navigator.clipboard.writeText(text + ' ' + url); $('gekopieerd').hidden = false; } catch (e) { prompt('Kopieer deze link:', url); }
+  };
+  toon();
+}
+
+// ── Ontvangen ──
+async function ontvang(v){
+  const d = await unpack(v);
+  const qs = (d.q || []).map(q => q.map(clean)).filter(q => !check(q)).slice(0, MAX);
+  if (!qs.length) throw new Error('leeg');
+  $('ontvang').hidden = false;
+  $('van').textContent = clean(d.n) || 'Iemand';
+  $('aantal').textContent = `${qs.length} ${qs.length === 1 ? 'vraag' : 'vragen'}`;
+  $('ontvangset').textContent = clean(d.s);
+  $('open').href = 'kwizavond://vragen#v=' + v;
+  qs.forEach(q => $('ontvanglijst').append(item(q)));
+  $('csv').onclick = () => {
+    const cel = s => /[";\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+    const csv = 'vraag;goed antwoord;fout 1;fout 2;fout 3;weetje\n' + qs.map(q => [0, 1, 2, 3, 4, 5].map(i => cel(q[i] || '')).join(';')).join('\n') + '\n';
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob(['﻿' + csv], { type: 'text/csv' }));
+    a.download = `Vragen van ${clean(d.n) || 'familie'}.csv`; a.click();
+  };
+}
+
+// Een andere link in hetzelfde tabblad: opnieuw beginnen
+addEventListener('hashchange', () => location.reload());
+
+(async () => {
+  try {
+    const v = params.get('v'), s = clean(params.get('s')).slice(0, 24), c = clean(params.get('c'));
+    if (v) await ontvang(v);
+    else if (s && /^[A-Z0-9]{4,8}$/.test(c)) maak(s, c);
+    else $('geen').hidden = false;
+  } catch (e) { $('kapot').hidden = false; }
+})();
+</script>
+</body>
+</html>
