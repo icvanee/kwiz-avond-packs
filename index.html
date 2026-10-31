@@ -24,6 +24,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" as="image" href="media/hero-reel.jpg">
 <link rel="stylesheet" href="style.css">
+<style>
+.kolommen{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}
+.kolommen th,.kolommen td{padding:8px 10px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}
+.kolommen th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
+.kolommen td:first-child{font-weight:800;font-family:ui-monospace,monospace;width:56px}
+.kolommen td:last-child{opacity:.7}
+</style>
 </head>
 <body>
 <a class="skip" href="#inhoud">Naar de inhoud</a>
@@ -137,6 +144,12 @@
         <span class="emo" aria-hidden="true">🧠</span>
         <h3>1000 vragen</h3>
         <p>In acht categorieën, van aardrijkskunde tot eten en drinken. Elke vraag is blind nagekeken voordat hij in de app kwam.</p>
+      </article>
+
+      <article class="card">
+        <span class="emo" aria-hidden="true">👨‍👩‍👧</span>
+        <h3>Jullie eigen vragen</h3>
+        <p>Maak een spreadsheet met vragen over de familie of de vriendengroep, en ze worden een eigen categorie in het spel. Perfect voor een verjaardag of familiedag. <a href="#eigen-vragen">Zo werkt het</a>.</p>
       </article>
 
       <article class="card">
@@ -315,6 +328,22 @@
       <h2 id="faq-titel">Goed om te weten</h2>
     </div>
     <div class="faq">
+      <details id="eigen-vragen">
+        <summary>Kunnen we onze eigen vragen spelen?</summary>
+        <div><p>Ja, vanaf versie 1.1. Maak in Numbers, Excel of Google Sheets een tabel met één vraag per regel:</p>
+    <table class="kolommen">
+      <thead><tr><th>Kolom</th><th>Wat</th><th>Voorbeeld</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>Vraag</td><td>Hoe heette onze eerste hond?</td></tr>
+        <tr><td>B</td><td>Goed antwoord</td><td>Bobbie</td></tr>
+        <tr><td>C</td><td>Fout antwoord</td><td>Max</td></tr>
+        <tr><td>D</td><td>Fout antwoord</td><td>Luna</td></tr>
+        <tr><td>E</td><td>Fout antwoord</td><td>Snuf</td></tr>
+        <tr><td>F</td><td>Weetje (mag leeg)</td><td>Bobbie werd 14 jaar.</td></tr>
+      </tbody>
+    </table>
+    <p>Het goede antwoord staat altijd in kolom B; het spel schudt de antwoorden. Bewaar de tabel als CSV en kies hem in de app via <b>👨‍👩‍👧 Eigen vragen</b>. Jullie vragen worden een eigen categorie, met een naam die je zelf kiest. Of zet <b>Alleen eigen vragen</b> aan voor een familiedag. Begin met ons <a href="voorbeeld-eigen-vragen.csv" download>voorbeeldbestand</a>.</p></div>
+      </details>
       <details>
         <summary>Werkt het zonder Apple TV?</summary>
         <div><p>Ja. De iPhone van de host en de telefoons van de spelers zijn genoeg. Een Apple TV is een leuk extraatje voor het grote scherm, maar niet nodig.</p></div>

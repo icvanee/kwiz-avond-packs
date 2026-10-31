@@ -20,6 +20,13 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <link rel="stylesheet" href="style.css">
+<style>
+.kolommen{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}
+.kolommen th,.kolommen td{padding:8px 10px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}
+.kolommen th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
+.kolommen td:first-child{font-weight:800;font-family:ui-monospace,monospace;width:56px}
+.kolommen td:last-child{opacity:.7}
+</style>
 </head>
 <body>
 <a class="skip" href="#inhoud">Naar de inhoud</a>
@@ -64,6 +71,22 @@
   <div class="card"><b>Wat doen de robots?</b><p>Robots zijn medespelers voor als je met weinig mensen bent. Ze tellen niet mee voor het aantal spelers.</p></div>
   <div class="card"><b>Waar blijven de selfies?</b><p>Selfies staan alleen in het geheugen van de iPhone van de host zolang het spel loopt. Daarna zijn ze weg. Lees meer in ons <a href="privacy.html">privacybeleid</a>.</p></div>
   <div class="card"><b>Er klopt een vraag niet.</b><p>Laat het ons weten via <a href="mailto:info@kwizavond.nl">info@kwizavond.nl</a>, met de vraag erbij. We passen hem aan in een volgend vragenpakket.</p></div>
+
+  <h2>Eigen vragen</h2>
+  <div class="card"><b>Kan ik onze eigen vragen spelen?</b><p>Ja, vanaf versie 1.1. Maak in Numbers, Excel of Google Sheets een tabel met één vraag per regel, in deze kolommen:</p>
+    <table class="kolommen">
+      <thead><tr><th>Kolom</th><th>Wat</th><th>Voorbeeld</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>Vraag</td><td>Hoe heette onze eerste hond?</td></tr>
+        <tr><td>B</td><td>Goed antwoord</td><td>Bobbie</td></tr>
+        <tr><td>C</td><td>Fout antwoord</td><td>Max</td></tr>
+        <tr><td>D</td><td>Fout antwoord</td><td>Luna</td></tr>
+        <tr><td>E</td><td>Fout antwoord</td><td>Snuf</td></tr>
+        <tr><td>F</td><td>Weetje (mag leeg)</td><td>Bobbie werd 14 jaar.</td></tr>
+      </tbody>
+    </table>
+    <p>Het goede antwoord staat altijd in kolom B; het spel schudt de antwoorden. Een kopregel bovenaan mag. Bewaar de tabel als CSV en kies hem in de app via <strong>👨‍👩‍👧 Eigen vragen</strong> op het startscherm. Begin makkelijk met ons <a href="voorbeeld-eigen-vragen.csv" download>voorbeeldbestand</a>.</p></div>
+  <div class="card"><b>Waar komen de eigen vragen in het spel?</b><p>Ze worden een eigen categorie, met de naam die je zelf kiest, bijvoorbeeld 👨‍👩‍👧 Familie Jansen. Wie aan de beurt is, kiest die categorie net als Sport of Muziek. Voor een familiedag zet je <strong>Alleen eigen vragen</strong> aan; dan komen alleen jullie vragen langs. De vragen blijven op je iPhone.</p></div>
 
   <h2>Plus, Avondpas en aankopen</h2>
   <div class="card"><b>Hoeveel spelers kunnen meedoen?</b><p>Gratis 4 spelers en 8 vragen per spel; robots tellen niet mee. Met Kwiz Avond Plus of een Avondpas zijn dat er 30, met tot 30 vragen per spel.</p></div>
