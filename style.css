@@ -93,6 +93,10 @@ p{margin:0 0 14px}
 .hero .wrap{grid-template-areas:"text" "video" "ticks";gap:28px}
 .hero-text{grid-area:text}
 .hero .ticks{grid-area:ticks;margin:0}
+/* Gratis proberen: wel noemen, maar klein en zonder spotje */
+.hero ul.ticks li.more{display:block;margin-top:8px;color:var(--dim);font-size:14px}
+.hero ul.ticks li.more::before{content:none}
+.hero ul.ticks li.more a{color:var(--cyan)}
 .hero-phone{grid-area:video}
 @media (max-width:879px){
   .hero{padding-top:28px}
