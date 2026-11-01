@@ -57,12 +57,11 @@
       <h1 id="hero-titel"><span class="c glow-c">Haal de pubquiz</span><span class="l2 glow-g">in huis</span></h1>
       <p class="lead">Je iPhone is de quizmaster en jij speelt gewoon mee. Je vrienden scannen een QR-code en doen mee op hun eigen telefoon. Geen app, geen account, geen gedoe.</p>
       <div class="btn-row">
-        <!-- APP STORE-KNOP: zodra de app live is, vervang overal "Binnenkort in de App Store" door "Download in de App Store" -->
-        <a class="btn btn-store" href="https://apps.apple.com/nl/app/id6762049883">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v7m-3-3 3 3 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span>Binnenkort in de App Store</span>
+        <a class="store-badge" href="https://apps.apple.com/nl/app/kwiz-avond/id6762049883"><img src="media/app-store-badge-nl.svg" alt="Download in de App Store" width="162" height="54"></a>
+        <a class="how-badge" href="#zo-werkt-het">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 8.2v7.6l6-3.8z" fill="currentColor"/></svg>
+          <span><small>Bekijk eerst</small>Zo werkt het</span>
         </a>
-        <a class="btn btn-ghost" href="#zo-werkt-het">Zo werkt het</a>
       </div>
     </div>
     <ul class="ticks">
@@ -83,7 +82,7 @@
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">Zo werkt het</p>
-      <h2 id="zwh-titel">Drie stappen, dan <span class="c">quizzen</span></h2>
+      <h2 id="zwh-titel">Drie stappen, dan <span class="c">kwizzen</span></h2>
       <p class="lead">Geen inschrijving, geen gedoe met accounts. Binnen een minuut zit iedereen aan tafel.</p>
     </div>
     <div class="steps">
@@ -108,7 +107,7 @@
         </div>
       </div>
       <div class="step">
-        <div class="phone green">
+        <div class="phone pink">
           <video autoplay muted loop playsinline preload="none" poster="media/tel-03a-onthulling-goed.jpg" width="720" height="1280"
             data-src="media/tel-03a-onthulling-goed.mp4" aria-label="Het goede antwoord wordt onthuld: GOED +200 en de medaille Wijze uil"></video>
         </div>
@@ -137,7 +136,7 @@
           <h3><span class="p">200 meezingers</span></h3>
           <p>Raad wie het zong of hoe het nummer heet. Daarna zet je het met de knop <b>"Speel af in Apple Music"</b> meteen op, en zingt de hele tafel mee. Vals mag.</p>
         </div>
-        <div class="phone purple shot"><img src="media/meezingers.jpg" alt="Na een meezinger staat op de telefoon de kaart Zing mee met de knop Speel af in Apple Music" width="600" height="1228" loading="lazy"></div>
+        <div class="phone pink shot"><img src="media/meezingers.jpg" alt="Na een meezinger staat op de telefoon de kaart Zing mee met de knop Speel af in Apple Music" width="600" height="1228" loading="lazy"></div>
       </article>
 
       <article class="card">
@@ -165,7 +164,7 @@
         </div>
         <div>
           <span class="emo" aria-hidden="true">📸</span>
-          <h3><span class="c">Selfies</span> en een bedroefde snoet</h3>
+          <h3><span class="g">Selfies</span> en een bedroefde snoet</h3>
           <p>Maak bij het meedoen een selfie, dan sta je met je eigen hoofd in de stand. Fout antwoord? Dan krijg je een bedroefde snoet. De winnaar krijgt een kampioensselfie, en de hekkensluiter… ook een foto.</p>
         </div>
       </article>
@@ -183,7 +182,7 @@
       </article>
 
       <article class="card media flip">
-        <div class="phone purple shot"><img src="media/kampioensvraag.jpg" alt="De winnaar ziet zijn kampioensvraag met de knoppen Stel aan iedereen, Andere vraag en Liever niet" width="600" height="1228" loading="lazy"></div>
+        <div class="phone pink shot"><img src="media/kampioensvraag.jpg" alt="De winnaar ziet zijn kampioensvraag met de knoppen Stel aan iedereen, Andere vraag en Liever niet" width="600" height="1228" loading="lazy"></div>
         <div>
           <span class="emo" aria-hidden="true">🌶️</span>
           <h3>De <span class="p">kampioensvraag</span></h3>
@@ -194,10 +193,10 @@
       <article class="card media">
         <div>
           <span class="emo" aria-hidden="true">👏</span>
-          <h3><span class="gr">Applaus</span> vanaf elke telefoon</h3>
+          <h3><span class="c">Applaus</span> vanaf elke telefoon</h3>
           <p>Klappen, juichen, proosten of lachen: iedereen stuurt reacties vanaf de eigen telefoon, en die zweven over het scherm. De hele zaal doet mee.</p>
         </div>
-        <div class="phone green">
+        <div class="phone cyan">
           <video autoplay muted loop playsinline preload="none" poster="media/tel-04-tussenstand.jpg" width="720" height="1280"
             data-src="media/tel-04-tussenstand.mp4" aria-label="De tussenstand met selfies, terwijl emoji-reacties van spelers over het scherm zweven"></video>
         </div>
@@ -282,7 +281,7 @@
       <p class="lead">Alleen de host betaalt. Je gasten spelen altijd gratis mee.</p>
     </div>
     <div class="prices">
-      <div class="price">
+      <div class="price free">
         <span class="badge n">Om te proberen</span>
         <h3>Gratis</h3>
         <p class="amount">€0</p>
@@ -379,10 +378,7 @@
     <h2 id="cta-titel"><span class="c">Wie wordt de slimste</span><br><span class="g">van de kroeg?</span></h2>
     <p class="lead">Pak je iPhone, roep je vrienden erbij en zet de eerste vraag klaar.</p>
     <div class="btn-row">
-      <a class="btn btn-store" href="https://apps.apple.com/nl/app/id6762049883">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v7m-3-3 3 3 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>Binnenkort in de App Store</span>
-      </a>
+      <a class="store-badge" href="https://apps.apple.com/nl/app/kwiz-avond/id6762049883"><img src="media/app-store-badge-nl.svg" alt="Download in de App Store" width="162" height="54"></a>
     </div>
   </div>
 </section>
